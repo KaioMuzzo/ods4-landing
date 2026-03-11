@@ -4,56 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ladingpage-ws</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <header>
-        <nav id="logo-nav">
-            <div id="logo-div">
+        <nav id="nav">
+            <div class="nav-logo">
                 <img src="./media/principa-logo.png" alt="Corvo roxo em pixel art">
-                <span id="logo-font">E-Cessar</span>
+                <span class="nav-logo-name">E-Cessar</span>
             </div>
-            <div id="cta-div">
-                <a id="cta-how-to-work" href="#features-section">Como funciona</a>
-                <button id="cta-button" type="button">Testar grátis</button>
+            <div class="nav-cta">
+                <a class="nav-link" href="#features-section">Como funciona</a>
+                <button class="btn-primary" type="button">Testar grátis</button>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="hero-section">
-            <div>
-                <h1>Binário não é difícil. Você só nunca praticou do jeito certo.</h1>
-                <p>Uma ferramenta rápida de revisão para estudantes que querem dominar conversão binária sem complicação.</p>
+            <div class="hero-text">
+                <h1>Binário não é difícil. <br>Você só nunca <br>praticou do jeito certo.</h1>
+                <p>Uma ferramenta rápida de revisão para estudantes que <br>querem dominar conversão binária sem complicação.</p>
                 <button type="button">Testar grátis</button>
             </div>
             <img src="./media/hero-image.png" alt="Corvo roxo em pixel art">
         </section>
 
         <section id="features-section">
-            <h2>E se fosse mais simples do que parece?</h2>
-            <p>Tudo o que você precisa entender cabe em três passos.</p>
             <div>
-                <img src="./media/features-first-img.png" alt="Corvo roxo em pixel art">
-                <h2>Cada posição vale uma potência de 2</h2>
-                <p>Da direita para a esquerda: <br>1, 2, 4, 8, 16, 32...</p>
+                <h2>E se fosse mais simples do que parece?</h2>
+                <p>Tudo o que você precisa entender cabe em três passos.</p>
             </div>
-            <div>
-                <img src="./media/features-second-img.png" alt="Corvo roxo em pixel art">
-                <h2>Só conte onde tem 1</h2>
-                <p>Ignore os zeros. <br>Some apenas os valores onde aparece 1.</p>
-            </div>
-            <div>
-                <img src="./media/features-third-img.png" alt="Corvo roxo em pixel art">
-                <h2>Some e pronto</h2>
-                <p>A soma final é o número decimal.</p>
+            <div class="features-cards">
+                <div>
+                    <img src="./media/features-first-img.png" alt="Corvo roxo em pixel art">
+                    <h3>Cada posição vale uma <br>potência de 2</h3>
+                    <p>Da direita para a esquerda: <br>1, 2, 4, 8, 16, 32...</p>
+                </div>
+                <div>
+                    <img src="./media/features-second-img.png" alt="Corvo roxo em pixel art">
+                    <h3>Só conte onde tem 1</h3>
+                    <p>Ignore os zeros. <br>Some apenas os valores onde aparece 1.</p>
+                </div>
+                <div>
+                    <img src="./media/features-third-img.png" alt="Corvo roxo em pixel art">
+                    <h3>Some e pronto</h3>
+                    <p>A soma final é o número decimal.</p>
+                </div>
             </div>
         </section>
 
         <section id="game-section">
-            <div>
-                <h2></h2>
-                <p></p>
+            <div class="game-instructions">
+                <h2>Teste agora</h2>
+                <p>Converta o número ao lado para decimal. <br>Você pode tentar quantas vezes quiser.</p>
             </div>
             
             <hr>

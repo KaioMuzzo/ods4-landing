@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    background-color: var(--background-color);
+}
+
+/* NAV */
+header {
+  margin-inline: 42px;
+  padding-block: 20px;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-logo-name {
+  color: var(--neutral);
+  font-family: var(--poppins);
+  font-weight: var(--bold);
+  font-size: 1.35rem;
+  line-height: 130%;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--poppins);
+  color: var(--neutral);
+  font-weight: var(--semi-bold);
+  line-height: 24px;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding-inline: 50px;
+  padding-block: 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: var(--semi-bold);
+  font-family: var(--poppins);
+}
+
+/* Hero */
+#hero-section {
+  margin-inline: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+    color: var(--white);
+    padding-left: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-family: var(--poppins);
+    font-size: 4.1875rem;
+    font-weight: var(--bold);
+    line-height: 130%;
+    word-spacing: -2.5%;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.hero-text p {
+    font-family: var(--mulish);
+    font-weight: var(--regular);
+    font-size: 1.75rem;
+    line-height: 140%;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.hero-text button {
+    padding-inline: 30px;
+    padding-block: 16px;
+    background-color: var(--neutral);
+    border-radius: 20px;
+    margin-top: 40px;
+    font-family: var(--poppins);
+    font-weight: var(--semi-bold);
+    font-size: 1rem;
+    line-height: 24px;
+    color: var(--neutral-mineshaft);
+}
+
+#hero-section img {
+    margin-right: 73.16px;
+    margin-left: 33.16px;
+}
+
+/* Features */
+#features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    padding-block: 80px;
+    color: var(--white);
+}
+
+#features-section h2 {
+    font-family: var(--poppins);
+    font-weight: var(--bold);
+    font-size: 2.375rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#features-section p {
+    font-family: var(--mulish);
+    font-weight: var(--regular);
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+}
+
+.features-cards {
+    display: flex;
+    gap: 24px;
+}
+
+.features-cards div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 24px;
+    padding-block: 42px;
+}
+
+.features-cards img {
+    margin-bottom: 30px;
+    width: 228px;
+    height: 228px;
+}
+
+.features-cards h3 {
+    font-family: var(--poppins);
+    font-weight: var(--semi-bold);
+    font-size: 1.75rem;
+    line-height: 130%;
+    letter-spacing: -1%;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.features-cards p {
+    font-family: var(--mulish);
+    font-weight: var(--regular);
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+}
+
+/* Game */
+#game-section {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.game-instructions h2 {
+    font-family: var(--poppins);
+    font-weight: var(--bold);
+    font-size: 2.375rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+}
+
+.game-instructions p {
+    font-family: var(--mulish);
+    font-weight: var(--regular);
+    font-size: 1.5rem;
+    line-height: 140%;
+    text-align: center;
+}

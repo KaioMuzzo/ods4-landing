@@ -1,0 +1,17 @@
+:root {
+    /* Colors */
+    --background-color: #090C13;
+    --neutral: #F8F9FF;
+    --neutral-mineshaft: #2D2D2D;
+    --white: #FFFFFF;
+    --primary-color: #B82FED;
+
+    /* fonts */
+    --poppins: 'Poppins', sans-serif;
+    --mulish: 'Mulish', sans-serif;
+
+    /* Bold */
+    --regular: 400;
+    --semi-bold: 600;
+    --bold: 700;
+}
