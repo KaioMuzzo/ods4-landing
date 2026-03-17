@@ -421,3 +421,18 @@ header {
     line-height: 150%;
 }
 
+footer {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 42px;
+}
+
+footer span {
+    color: var(--white);
+    font-family: var(--mulish);
+    font-size: 0.875rem;
+    font-weight: var(--regular);
+    line-height: 160%;
+}
