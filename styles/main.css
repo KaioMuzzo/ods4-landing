@@ -272,7 +272,6 @@ header {
 /* Customization */
 #customization-section {
     display: flex;
-    height: 666px;
     padding: 80px 42px;
     justify-content: space-around;
     align-items: center;
@@ -328,3 +327,97 @@ header {
     border: 1px solid #E5F4F2;
     background: var(--white);
 }
+
+/* Pain points */
+#pain-points {
+    display: flex;
+    padding: 120px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-inline: 113px;
+}
+
+#pain-points .headline-subhead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+#pain-points .headline-subhead h2 {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: 2.375rem;
+    font-weight: var(--bold);
+    line-height: 130%;
+    letter-spacing: -0.76px;
+}
+
+#pain-points .headline-subhead p {
+    align-self: stretch;
+    color: var(--white);
+    text-align: center;
+    font-family: var(--mulish);
+    font-size: 1rem;
+    font-weight: var(--regular);
+    line-height: 150%;
+}
+
+#pain-points .card-row {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 30px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+#pain-points .project-card {
+    display: flex;
+    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex: 1 0 0;
+    border-radius: 20px;
+    background-color: #3B3B3B;
+    box-shadow: 34.854px 29.626px 48.34px 0 rgba(51, 102, 255, 0.05);
+}
+
+#pain-points .project-card img {
+    height: 278px;
+    align-self: stretch;
+    border-radius: 20px 20px 0 0;
+}
+
+#pain-points .card-text {
+    display: flex;
+    padding: 0 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+#pain-points .project-card h2 {
+    align-self: stretch;
+    color: var(--white);
+    font-family: var(--poppins);
+    font-size: 1.75rem;
+    font-weight: var(--semi-bold);
+    line-height: 130%;
+    letter-spacing: -0.28px;
+}
+
+#pain-points .project-card p {
+    align-self: stretch;
+    color: var(--white);
+    font-family: var(--mulish);
+    font-size: 1.313rem;
+    font-weight: var(--regular);
+    line-height: 150%;
+}
+
