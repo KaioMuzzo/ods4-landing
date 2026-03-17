@@ -178,6 +178,19 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../media/backgrount-game-section.png');
+    background-size: cover;
+    background-position: center;
+    margin-inline: 42px;
+    background-origin: content-box;
+}
+
+#game-section hr {
+    width: 2px;
+    height: 300px;
+    background-color: var(--white);
 }
 
 .game-instructions h2 {
@@ -196,3 +209,63 @@ header {
     line-height: 140%;
     text-align: center;
 }
+
+#game-section #binary-game {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-section .bits {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--poppins);
+    font-weight: var(--bold);
+    font-size: 1.357rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    margin-bottom: 16px;
+}
+
+#game-section .bit {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#game-section .blocks {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--white);
+    border-radius: 16px;
+}
+
+#game-section .support {
+    display: flex;
+    align-self: center;
+}
+
+#game-section label {
+    font-family: var(--mulish);
+    font-weight: var(--regular);
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#game-section #answer {
+    font-family: var(--mulish);
+    font-weight: var(--regular);
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    color: var(--white);
+    padding-block: 8px;
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: 16px;
+}
+
