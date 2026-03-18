@@ -2,12 +2,18 @@
 
 body {
     background-color: var(--background-color);
+    max-width: 1506px;
+    margin-inline: auto;
 }
 
 /* NAV */
 header {
   margin-inline: 42px;
   padding-block: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--background-color);
 }
 
 #nav {
@@ -59,6 +65,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 16px;
 }
 
 .hero-text {
@@ -99,6 +106,32 @@ header {
     font-size: 1rem;
     line-height: 24px;
     color: var(--neutral-mineshaft);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.4s ease;
+}
+
+.hero-text button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.hero-text button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hero-text button:hover {
+    color: var(--white);
 }
 
 #hero-section img {
@@ -107,6 +140,10 @@ header {
 }
 
 /* Features */
+#features-scroll-wrapper {
+    height: 300vh;
+}
+
 #features-section {
     display: flex;
     flex-direction: column;
@@ -114,6 +151,11 @@ header {
     gap: 42px;
     padding-block: 80px;
     color: var(--white);
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    justify-content: center;
 }
 
 #features-section h2 {
@@ -139,12 +181,20 @@ header {
     gap: 24px;
 }
 
-.features-cards div {
+.features-cards > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-inline: 24px;
     padding-block: 42px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.features-cards > div.card-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .features-cards img {
@@ -385,12 +435,21 @@ header {
     border-radius: 20px;
     background-color: #3B3B3B;
     box-shadow: 34.854px 29.626px 48.34px 0 rgba(51, 102, 255, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    will-change: transform;
+}
+
+#pain-points .project-card:hover {
+    box-shadow: 0 20px 40px rgba(184, 47, 237, 0.2);
 }
 
 #pain-points .project-card img {
     height: 278px;
+    width: 100%;
     align-self: stretch;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    object-position: center 20%;
 }
 
 #pain-points .card-text {
