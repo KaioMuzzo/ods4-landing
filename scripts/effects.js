@@ -43,3 +43,18 @@ cards.forEach(card => {
     });
 });
 // [/EFEITO: tilt no hover - pain points]
+
+// [EFEITO: fade + slide-up ao entrar na viewport - customization section]
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const delay = entry.target.dataset.delay ?? 0;
+            entry.target.style.animationDelay = `${delay}ms`;
+            entry.target.classList.add('visible');
+            scrollObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+// [/EFEITO: fade + slide-up ao entrar na viewport - customization section]

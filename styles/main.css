@@ -243,6 +243,14 @@ header {
     background-color: var(--white);
 }
 
+.game-instructions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
 .game-instructions h2 {
     font-family: var(--poppins);
     font-weight: var(--bold);
@@ -260,9 +268,18 @@ header {
     text-align: center;
 }
 
+.game-instructions p #try-again {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    font-weight: var(--bold);
+}
+
 #game-section #binary-game {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #game-section .bits {
@@ -274,6 +291,7 @@ header {
     line-height: 130%;
     letter-spacing: -2%;
     margin-bottom: 16px;
+    gap: 8px;
 }
 
 #game-section .bit {
@@ -306,6 +324,38 @@ header {
     margin-bottom: 16px;
 }
 
+@property --border-progress {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+.input-wrapper {
+    padding: 2px;
+    border-radius: 18px;
+    display: inline-flex;
+    background: #ffffff33;
+    width: 50%;
+}
+
+.input-wrapper.filling {
+    background: conic-gradient(#888888 var(--border-progress), transparent var(--border-progress));
+    animation: fill-border 1s linear forwards;
+}
+
+.input-wrapper.correct {
+    background: #22c55e44;
+}
+
+.input-wrapper.wrong {
+    background: #ef444444;
+}
+
+@keyframes fill-border {
+    from { --border-progress: 0%; }
+    to { --border-progress: 100%; }
+}
+
 #game-section #answer {
     font-family: var(--mulish);
     font-weight: var(--regular);
@@ -314,9 +364,42 @@ header {
     text-align: center;
     color: var(--white);
     padding-block: 8px;
-    background: transparent;
-    border: 1px solid var(--white);
-    border-radius: 16px;
+    background: rgba(9, 12, 19, 0.8);
+    border: none;
+    border-radius: 14px;
+    width: 100%;
+    outline: none;
+}
+
+#game-section #answer::-webkit-inner-spin-button,
+#game-section #answer::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+#game-section #answer[type=number] {
+    appearance: textfield;
+}
+
+/* Customization animations */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+}
+
+.animate-on-scroll.visible {
+    animation: fadeSlideUp 0.5s ease forwards;
 }
 
 /* Customization */
@@ -376,6 +459,12 @@ header {
     border-radius: 20px;
     border: 1px solid #E5F4F2;
     background: var(--white);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#customization-section .card-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Pain points */
